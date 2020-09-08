@@ -30,10 +30,11 @@ const forecast = (longitude,lattitude, callback) => {
 
     }
     else{
-        callback(undefined,{
-            current_temp : body.current.temperature,
-            desc : body.current.weather_descriptions[0]
-        })
+        callback(undefined,
+            //current_temp : body.current.temperature,
+            //desc : body.current.weather_descriptions[0]
+            'The temperature is'+body.current.temperature+'and it is '+ body.current.weather_descriptions[0]
+        )
     }
     
 })
